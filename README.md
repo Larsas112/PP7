@@ -91,6 +91,13 @@ In this exercise you will:
    * Run `./solutions/sample` and confirm it prints `Hello, PP7!`.
 6. **Explain** in comments or a short README how each stage transforms the code.
 
+7. **Explanation**
+   Im Preprocess werden zunächst die Grundanweisungen ausgeführt. bei der include stdio.h werden verschiedene Dateien vom System geladen und im weiteren Verlauf auch definitionen von Dateiformaten bearbeitet.
+
+   In der Assembly-Datei wird der Dateiname spezifiziert und der Inhalt der printf als string gespeichert und an die Main-funktion weitergegeben. in der Mainfunktion wird dann die integrierte funktion printf gecalled und über den @PLT mit dem inhalt im register verknüft. In der Return Funktion wird erst der compiler identifiziert und dann wird die ausgabe an das Betriebssystem weitergegeben.
+
+   Der Assemler fügt die Prozesse zusammen. Ausführbar wird die Datei im schritt darauf.
+
 ---
 
 ### Task 2: Regex Search & Replace in Code
@@ -131,6 +138,12 @@ In this exercise you will:
    vim -c ":%s/printf/debug_printf/g" -c ":wq" solutions/debug_sample.c
    ```
 7. **Explain** each tool’s approach to regex-based search and replace, and when you might prefer one over the others.
+
+8. **Explanation**
+   grep ist für Such anforderungen ideal, er ist darauf optimiert einzelne Wörter oder sogar muster im code zu finden.
+   sed ist ideal für einfache Text anpassungen, mit einer sehr guten Zeit performance. Findet und ersetzt Text oder fügt Text an gewisse stelen hinzu.
+   awk ist eine minimalistische Programmiersprache, mit der ganze Zeilenfolgen, auch mithilfe von Rechnungen, ausgegeben werden können. Zudem ist eine Anpassung der ausgabe möglich.
+   
 
 ---
 
